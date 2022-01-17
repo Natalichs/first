@@ -2,13 +2,13 @@ public class Main {
 
     public static void main(String[] args) {
         String[][] array= {
-                {"41","4","8","77ggg"},
+                {"41","4","8","77"},
                 {"7","2","10","7"},
                 {"19","23","1","55"},
                 {"25","73","49","9"}};
         //System.out.println(check4x4(array));
         try{
-            System.out.println(stringToInt(array));
+            printArr(stringToInt(array));
         }catch(MyArraySizeException e){
             System.out.println(e.getMessage());
         }catch (MyArrayDataException e){
@@ -39,6 +39,14 @@ public class Main {
 
         return arrInt;
 
+    }
+    public static void printArr(int[][] arr){
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j]+ " | ");
+            }
+            System.out.println();
+        }
     }
 
     }
